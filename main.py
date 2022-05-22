@@ -11,8 +11,8 @@ import time
 
 MY_LAT = 51.507351  # Your latitude
 MY_LONG = -0.127758  # Your longitude
-MY_EMAIL = "divya2pythondeveloper@gmail.com"
-MY_PASSWORD = "xfnleymkhjcjmqkb"
+MY_EMAIL = "gmail.com"
+MY_PASSWORD = "password"
 
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()
@@ -46,7 +46,7 @@ while True:
                 connection.starttls()
                 connection.login(user=MY_EMAIL, password=MY_PASSWORD)
                 connection.sendmail(from_addr=MY_EMAIL,
-                                    to_addrs="divya2pythondeveloper@gmail.com",
+                                    to_addrs="gmail.com",
                                     msg=f"Subject:ISS overhead !!!\n\n"
                                         f"There is iss orbiting above your location\n"
                                         f"Enjoy!!!!")
